@@ -59,24 +59,3 @@ function reset() {
     document.getElementById("cursorbutton").innerHTML = "Hide Cursor";
     document.getElementById("fullDiv").style.cursor = "default";
 };
-
-//
-function takeNum() {
-    var output = "";
-    num1 = Number(document.getElementById("num1").value)
-    num2 = Number(document.getElementById("num2").value)
-    if (num1 < num2) {
-        for (var counter = num1; counter < num2 + 1; counter++) {
-            output += counter;
-            output += " ";
-        };
-    } else if (num1 > num2) {
-        for (var counter = num1; counter > num2 - 1; counter--) {
-            output += counter;
-            output += " ";
-        };
-    } else {
-        output = "Numbers are the same"
-    }
-    document.getElementById("countsect").innerHTML = output;
-}
