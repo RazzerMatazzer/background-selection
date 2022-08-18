@@ -23,16 +23,14 @@ function createBackground(root) {
     var viewAspect = viewW / viewH;
     var imgAspect = imgW / imgH;
     if (viewAspect < imgAspect) {
-        alert("Set to height");
         fullImg.style.height = viewH + "px";
         fullImg.style.width = (viewH * imgAspect) + "px";
         window.scrollTo((document.body.scrollWidth / 2), 0);
         
     } else {
-        alert("Set to width");
         fullImg.style.width = viewW + "px";
         fullImg.style.height = (viewW / imgAspect) + "px";
-        window.scrollTo(0, (document.body.scrollHeight / 2) - 177); 
+        window.scrollTo(0, (document.body.scrollHeight / 2));
     };
 };
 function killBackground() {
